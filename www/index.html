@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
   <meta http-equiv="Content-Security-Policy" content="default-src * data:; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'">
   <script src="components/loader.js"></script>
+  <script src="components/myscripts.js"></script>
   <script src="lib/onsenui/js/onsenui.min.js"></script>
 
   <link rel="stylesheet" href="components/loader.css">
@@ -12,45 +13,34 @@
   <link rel="stylesheet" href="lib/onsenui/css/onsen-css-components.css">
   <link rel="stylesheet" href="css/style.css">
 
-  <script>
-    ons.ready(function() {
-      console.log("Onsen UI is ready!");
-    });
-  </script>
 </head>
 <body>
+
+<!--  
   <ons-toolbar>
-    <!--
     <div class="left">
       <ons-back-button>Back</ons-back-button>
     </div>
-    -->
-    <div class="center">Winaward</div>
-    <script>
     
-        /* 
-        //on page1 init
-        document.addEventListener('init', function(event) {
-          if (event.target.matches('#page1')) {
-            ons.notification.alert('Page 1 is initiated.');
-            // Set up content...
-          }
-        }, false);
-         */
-         
-        ons.ready(function() {
-          // Onsen UI is now initialized
-          ons.notification.alert('Welcome to Winaward !');
-        });
-    </script>
-    <div class="right">
+    <div class="center">Winaward</div>
+   
+  </ons-toolbar>
+-->
+ 
+<ons-navigator id="myNavigator" page="index.html" animation="slide">
+  <ons-page id="page1">
+    <ons-toolbar>
+      <div class="center">Page 1</div>
+       <div class="right">
       <ons-toolbar-button>
         <ons-icon icon="md-menu"></ons-icon>
       </ons-toolbar-button>
     </div>
-  </ons-toolbar>
-  <ons-page id="page1">
-    Some content
+    </ons-toolbar>
+    <p>This is the first page.</p>
+    <ons-button id="push-button">Push page</ons-button>
   </ons-page>
+</ons-navigator>
+
 </body>
 </html>
