@@ -1,3 +1,9 @@
 # winawardfrontend
 
-Hybrid Mobile App based on Onsen UI and Monaca
+Hybrid Mobile App to manage favourite Movie Lists.
+
+Based on 
+   - Apache Cordova (with Monaca)
+   - Onsen UI
+   - Backbone.js
+
