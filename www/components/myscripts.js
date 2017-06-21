@@ -30,12 +30,41 @@ document.addEventListener('init', function(event) {
    else if (page.id === 'page2') {
     page.querySelector('ons-toolbar .center').innerHTML = page.data.title;
     
+    /*
     var divGD = ons.GestureDetector(document.querySelector('#mylist'));
     divGD.on('swipeleft swiperight', function(event) {
      ons.notification.toast('cool');
     
     });
-
+    
+    */
+    
+    function AppViewModel() {
+       
+    }
+    
+   
+    
+    
+    
+    
+    // Overall viewmodel for this screen, along with initial state
+    function SampleViewModel() {
+        var self = this;
+        
+        //this.firstName = "Bert";
+        //this.lastName = "Bertington";
+    
+        // Non-editable catalog data - would come from the server
+        this.awardList = [
+            { title: "New York Film Festival", subtitle: "indie movies" },
+            { title: "Sundance Film Festival", subtitle: "indie movies"},
+        ];    
+    
+       
+    }
+    ko.applyBindings(new SampleViewModel()); 
+ 
   }
   
   
