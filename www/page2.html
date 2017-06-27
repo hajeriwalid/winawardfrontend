@@ -4,59 +4,18 @@
       <div class="center"></div>
     </ons-toolbar>
 
-    <h1>Award Winning Movies</h1>
-    <ons-list>
-   
-       <ons-list-header>US Movies Awards</ons-list-header> 
-       
-       <!-- simple data binding
-       <p>First name: <strong data-bind="text: firstName"></strong></p>
-        <p>Last name: <strong data-bind="text: lastName"></strong></p>
-        -->
-        
-        
-    <table>
-        <thead><tr>
-            <th>Award Name</th>>
-        </tr></thead>
-        <!-- Todo: Generate table body -->
-        <tbody data-bind="foreach: awardList">
-            <tr>
-                <td data-bind="text: title"></td>
-                <td data-bind="text: subtitle"></td>
-                <!--
-                cool
-                <td data-bind="text: meal().mealName"></td>
-                <td data-bind="text: meal().price"></td>
-                -->
-            </tr>    
-        </tbody>
-    </table>
+    <ons-list data-bind="foreach: awardList" id="mylist">
 
-    
-     </ons-list>
+        <ons-list-item>
+            <div class="left">
+              <ons-icon icon="md-favorite-outline" class="list-item__icon"></ons-icon>
+            </div>
+            <div class="center">
+              <span class="list-item__title" data-bind="text: title"></span>
+              <span class="list-item__subtitle" data-bind="text: subtitle"></span>
+            </div>
+        </ons-list-item>
+    </ons-list>
 </ons-page>
-   
-   <!--
-   <ons-list-item>
-        <div class="left">
-          <ons-icon icon="md-favorite-outline" class="list-item__icon"></ons-icon>
-        </div>
-        <div class="center">
-          <span class="list-item__title">Sundance Film Festival</span>
-          <span class="list-item__subtitle">indie movies</span>
-        </div>
-      </ons-list-item>
-      
-       <ons-list-item>
-        <div class="left">
-          <ons-icon icon="md-favorite-outline" class="list-item__icon"></ons-icon>
-        </div>
-        <div class="center">
-          <span class="list-item__title">New York Film Festival</span>
-          <span class="list-item__subtitle">indie movies</span>
-        </div>
-      </ons-list-item>
-    -->
-   
+
    
